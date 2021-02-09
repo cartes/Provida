@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML lang="es">
+
+<HEAD>
+  <TITLE><%= recipient.firstName %>, tienes la Cuenta de Ahorro m&aacute;s conveniente</TITLE>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+
+  <STYLE type=text/css>
+    body {
+      background-color: #fff;
+      margin-left: 0px;
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+    }
+
+    img {
+      border: 0;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      min-width: 320px;
+    }
+
+    .ReadMsgBody {
+      width: 100%;
+    }
+
+    table {
+      border-collapse: none;
+    }
+
+    table.box-btn {
+      width: 200px;
+      padding: 10px;
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    td[class="icono"],
+    td.icono {
+      display: table-cell;
+      width: 300px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    background-image {
+      border:none;
+      border-color: #fff;
+    }
+
+    /****** COMIENZO DE CODIGO RESPONSIVE ********/
+    @media screen and (max-width: 425px) {
+      td.icon-txt {
+        width: 100%;
+        display: block;
+        padding: 0px !important;
+        min-width: 100%;
+      }
+
+      td.icon-txt img{ 
+        margin: 0 auto;
+      }
+      td.content-txt {
+        width: 100%;
+        display: block;
+        text-align: center !important;
+        padding: 10px 5px !important;
+      }
+
+
+
+      table[class="tabla-texto"] {
+        width: 100% !important;
+        text-align: center;
+      }
+
+      table[class="tabla-texto2"] {
+        width: 100% !important;
+        display: block;
+        text-align: left;
+        padding: 5px 2px 5px 2px !important;
+      }
+
+      table[class="tabla-texto-iconos"] {
+        width: 80% !important;
+        text-align: center;
+        padding: 12px 2px 12px 2px !important;
+      }
+
+      table[class="hide"] {
+        display: none !important;
+      }
+
+      img[class="image"] {
+        width: 100%;
+        height: auto;
+      }
+
+      img[class="image3"] {
+        width: 85% !important;
+        height: auto;
+        text-align: center !important;
+        padding: 8px 0px 8px 15px !important;
+
+      }
+
+      td[class="centrar2"] {
+        padding: 5px 5px 5px 5px !important;
+      }
+
+      td[class="tit1"] {
+        font-size: 26px !important;
+        line-height: 28px !important;
+        text-align: left !important;
+        padding: 10px 20px !important;
+      }
+
+      td[class="txt"] {
+        font-size: 16px !important;
+        line-height: 20px !important;
+        padding: 10px 20px !important;
+      }
+
+      td[class="text2"] {
+        font-size: 14px !important;
+        line-height: 20px !important;
+        text-align: left !important;
+        padding: 10px 20px !important;
+      }
+
+      td[class="txt22"] {
+        font-size: 14px !important;
+        line-height: 20px !important;
+        text-align: left !important;
+        padding: 15px 37px 15px 37px !important;
+      }
+
+      td[class="txt2"] {
+        font-size: 14px !important;
+        line-height: 20px !important;
+        text-align: left !important;
+        padding: 15px 37px 25px 37px !important;
+      }
+
+      td[class="txt3"] {
+        font-size: 11px !important;
+        line-height: 15px !important;
+        text-align: center !important;
+        padding: 18px 37px 18px 37px !important;
+      }
+
+      td[class="centra"] {
+        text-align: center !important;
+        padding: 15px 5px 15px 5px !important;
+      }
+
+      td[class="centra2"] {
+        text-align: center !important;
+        padding: 20px 30px 10px 31px !important;
+      }
+
+      td[class="centra4-iconos"] {
+        text-align: center !important;
+        padding: 0px 15px 0px 15px !important;
+      }
+
+      td[class="centra3"] {
+        text-align: center !important;
+        padding: 15px 20px 5px 12px !important;
+      }
+
+      td[class="centra32"] {
+        text-align: center !important;
+        padding: 15px 40px 5px 12px !important;
+      }
+
+      td[class="tabla2"] {
+        text-align: center !important;
+        padding: 15px 5px 15px 5px !important;
+      }
+
+      td[class="boton"] {
+        width: 100% !important;
+        height: auto;
+        text-align: center !important;
+        padding: 10px 30px 10px 23px !important;
+      }
+
+      td[class="centra8"] {
+        text-align: center !important;
+        padding: 0 0 0 20% !important;
+      }
+
+      .image2 {
+        width: 100%;
+      }
+
+      td[class="icono"],
+      td.icono {
+        display: contents;
+        width: 100%;
+      }
+
+      td.centrar {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+      }
+
+      table.colegios td {
+        width: 25% !important;
+        max-width: 80px !important;
+        padding: 10px 5px !important;
+        vertical-align: middle !important;
+      }
+    }
+
+    .header-img {
+      display: none;
+    }
+
+    @media screen and (max-width: 320px) {
+      .width-320 {
+        display: block !important;
+      }
+    }
+
+    @media screen and (min-width: 321px) and (max-width: 375px) {
+      .width-375 {
+        display: block !important;
+      }
+    }
+
+    @media screen and (min-width: 376px) and (max-width: 425px) {
+      .width-425 {
+        display: block !important;
+      }
+    }
+
+    @media screen and (min-width: 426px) {
+      .width-768 {
+        display: block !important;
+      }
+    }
+
+    /****** FIN DE CODIGO RESPONSIVE ********/
+  </style>
+
+  <meta name=GENERATOR content="MSHTML 11.00.9600.19180">
+</head>
+
+<body>
+  <center>
+    <!--Inicio Legales Masterbase cabecera-->
+        <table class=container style="MAX-WIDTH: 600px; MIN-WIDTH: 320px; BACKGROUND-COLOR: #ffffff" cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+      <tbody>
+        <tr>
+          <td>
+            <table class=container style="MAX-WIDTH: 600px; MIN-WIDTH: 320px" cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+              <tbody>
+                <tr>
+                  <td width=600 align=center>
+                    <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+                      <tbody>
+                        <tr>
+                          <td style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px" bgColor=#ffffff class=centra8>
+                            <table cellSpacing=0 cellPadding=0 width=204 align=left border=0>
+                              <tbody>
+                                <tr>
+                                  <td style="PADDING-BOTTOM: 18px; PADDING-TOP: 10px; PADDING-LEFT: 30px; PADDING-RIGHT: 20px" width=400>
+                                    <a href="https://www.provida.cl/" target="_blank">
+                                      <img border=0 alt="" src="https://www.conversemosdetupension.cl/wp-content/uploads/2020/11/202002_Provida_LogoProvida-1.png" width=180>
+                                    </a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <table style="max-width: 600px; min-width: 320px; background-color: #ffffff" cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+      <tbody>
+        <tr>
+          <td class=tit1 style="FONT-SIZE: 28px; FONT-FAMILY: Georgia, 'Times New Roman', Times, serif; COLOR: #333333; PADDING-BOTTOM: 30px; TEXT-ALIGN: left; PADDING-LEFT: 40px; LINE-HEIGHT: 32px; PADDING-RIGHT: 70px;" width=600>
+            <strong><span style="color: #0090DA;"><%= recipient.firstName %></span>, tienes la Cuenta de Ahorro m&aacute;s conveniente</span></strong>
+          </td>
+        </tr>
+
+
+        <tr><!-- &aacute; &eacute; &iacute; &oacute; &uacute; &ntilde;  -->
+          <td class="txt" valign=middle style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #333333; padding-bottom: 30px; text-align: left; padding-top: 15px; padding-left: 40px; line-height: 20px; padding-right: 40px;"
+            width=600>
+            Tu Cuenta de Ahorro (Cuenta 2) en ProVida te permite juntar plata para todo, incluso, para tener un colch&oacute;n en caso de emergencias.
+          </td>    
+        </tr>
+
+        <tr>
+          <td class=bullet width=50% valign=top align=center style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#333333; text-align:left; background-color:#fff; padding:10px 30px 10px 10px; border-bottom: 5px solid #fff;">
+            <table>
+              <tr>
+                <td class="icon-txt" width="1%" valign="top" align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:18px; padding:15px 2px 10px 25px;line-height:20px;"><span style="color:#333333;"><strong
+                  style="color:#0090DA;"><img src="https://www.conversemosdetupension.cl/wp-content/uploads/2020/04/ico-int-grafico.png" width="80"></strong></span></td>
+                <td class="content-txt" width="99%" valign="top" align=center style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #000; padding-bottom: 10px; text-align: left; padding-top: 15px; padding-left: 38px; line-height: 20px; padding-right: 38px;">
+                  Es conveniente por su bajo costo y obtienes ganancias gracias a su buena Rentabilidad. Adem&aacute;s, si lo necesitas, puedes sacar tu plata de forma f&aacute;cil y r&aacute;pida.
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="txt" valign=middle style="background-color: #efefef; font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #333333; padding-bottom: 10px; text-align: left; padding-top: 30px; padding-bottom: 30px; padding-left: 40px; line-height: 20px; padding-right: 40px;"
+            width=600>
+            La Cuenta 2 de ProVida ha sido la m&aacute;s rentable, ya que es N&deg;1 en Rentabilidad Neta en todos los Fondos a 3 y 5 a&ntilde;os.
+            <br/><br/>
+            <img width="100%" src="https://www.conversemosdetupension.cl/wp-content/uploads/2021/01/Recurso-Ranking.png" />
+          </td>    
+        </tr>
+        <tr>
+          <td class="txt" valign=middle style="background-color: #efefef; font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #333333; padding-bottom: 10px; text-align: center; padding-top: 0px; padding-bottom: 30px; padding-left: 40px; line-height: 20px; padding-right: 40px;"
+            width=600>
+            <span style="text-align: center !important;">En <a href="https://queafp.cl/" target="_blank" style="color: #0090DA; font-weight: 700;">QueAFP.cl</a> podr&aacute;s comprobarlo t&uacute; mismo con su comparador de Cuenta 2.</span>
+          </td>    
+        </tr>
+
+
+      <tr>
+        <td align="center" style="padding: 10px 20px 30px 20px;" width="100%">
+          <table align="left" border="0" width="200" class="tabla-texto">
+            <tbody>
+              <tr>
+                <td align="center" class="boton"
+                  style="text-align:center; font-size:15px;line-height:22px; color:#fff; background-color:#007ABC; padding: 9px; font-family:Arial; border:none; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px;">
+                  <a href="https://www.previred.com/web/previred/" style="text-decoration: none;color:#fff; text-transform: uppercase;" target="_blank">
+                    <strong>AHORRAR M&Aacute;S</strong> 
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+
+
+        <tr>
+          <td class="text2" style="text-align:justify; font-size:15px; line-height:20px; padding-left:40px; padding-right:40px; padding-bottom:10px; padding-top:10px; color:#333333; font-family:Arial;" width="600">
+            Te saluda,<br>
+            <strong style="color: #0090DA;">ProVida AFP</strong><br><br>
+          </td>
+        </tr>
+    </tbody>
+ </table>
+
+    <!-- imagen -->
+    <!-- boton -->
+    <!--fin tabla 2 columnas-->
+    <!--fin contenido-->
+    <table class="container" style="max-width: 600px; min-width: 320px; padding-top: 20px; background-color: #ffffff" cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+      <tbody>
+        <tr>
+          <td>
+            <table width="100%" border=0 cellpadding="2">
+              <tbody>
+                <tr>
+                  <td style="font-size: 1px; line-height: 1px" bgColor=#0090da height=15 width="70%">
+                    <span style="font-size: 1px; line-height: 1px">&nbsp;</span>
+                  </td>
+                  <td style="font-size: 1px; line-height: 1px" bgColor=#0061a0 height=15 width="10%">
+                    <span style="font-size: 1px; line-height: 1px">&nbsp;</span>
+                  </td>
+                  <td style="font-size: 1px; line-height: 1px" bgColor=#a4ce4e height=15 width="20%">
+                    <span style="font-size: 1px; line-height: 1px">&nbsp;</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="container" style="max-width: 600px; min-width: 320px" cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+      <tbody>
+        <tr>
+          <td width=600 align=center>
+            <table class="tabla-texto2" cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <tbody>
+                <tr>
+                  <td style="text-align: center">
+
+                    <table class="tabla-texto2" cellSpacing=0 cellPadding=0 width=119 align=left border=0>
+                      <tbody>
+                        <tr>
+                          <td class="centra2" style="padding-bottom: 25px; padding-top: 15px; padding-left: 0px; padding-right: 0px" width=119>
+                            <a href="https://www.provida.cl/" target="_blank"><img border=0 alt="" src="https://www.conversemosdetupension.cl/wp-content/uploads/2020/10/202002_Provida_provida_2019.png" width=130></a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table class="tabla-texto2" cellSpacing=0 cellPadding=0 width=120 align=right border=0>
+                      <tbody>
+                        <tr>
+                          <td class="centra32" style="padding-bottom: 5px; padding-top: 20px; padding-left: 10px; padding-right: 50px" vAlign=bottom width=32 align=right>
+                            <img border=0 alt=unidos src="https://www.conversemosdetupension.cl/wp-content/uploads/2020/10/202002_Provida_unidos.png" width=120 height=18>
+                          </td>
+                          <td class="centra3" style="padding-bottom: 5px; padding-top: 20px; padding-left: 0px; padding-right: 10px" vAlign=bottom align=right>
+                            <a href="https://www.facebook.com/afpprovida">
+                              <img border=0 alt=FaceBook src="http://www.crio.cl/CRM/ProVida/202002_Provida_fb.png" width=9 height=18>
+                            </a>
+                          </td>
+                          <td class="centra3" style="padding-bottom: 5px; padding-top: 20px; padding-left: 0px; padding-right: 10px" vAlign=bottom width=35 align=right>
+                            <a href="https://twitter.com/afp_provida"><img border=0 alt=Twitter src="http://www.crio.cl/CRM/ProVida/202002_Provida_tw.png" width=19 height=16></a>
+                          </td>
+                          <td class="centra3" style="padding-bottom: 5px; padding-top: 20px; padding-left: 0px; padding-right: 10px" vAlign=bottom width=38 align=right>
+                            <a href="https://www.youtube.com/user/providaafp"><img border=0 alt=YouTube src="http://www.crio.cl/CRM/ProVida/202002_Provida_yt.png" width=21 height=15></a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!--Fin email-->
+            <!--Inicio Legales Masterbase pie-->
+            <table class="container" style="max-width: 600px; min-width: 320px" cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+              <tbody>
+                <tr>
+                  <td valign=middle class="txt2"
+                    style="font-size: 10px; font-family: Arial, Helvetica, sans-serif; color: #333333; padding-bottom: 10px; text-align: left; padding-top: 10px; padding-left: 10px; line-height: 13px; padding-right: 10px;" width=600>
+                    Rentabilidad expresada en t&eacute;rminos reales de los Fondos de Pensiones acumulada de los per&iacute;odos septiembre 2017 y octubre 2020; y septiembre 2015 y octubre 2020. En ese per&iacute;odo, 1&deg; lugar en los Fondos A, B, C y D y E, respecto a las otras AFP. La Rentabilidad es variable por lo que nada garantiza que las rentabilidades pasadas se repitan en el futuro. Inf&oacute;rmese sobre la Rentabilidad de su Fondo de Pensiones, las comisiones y la calidad de servicio de las AFP en el sitio web de la Superintendencia de Pensiones www.spensiones.cl
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center"> <br> <%@ include view='metPrvFooterProvida' %></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+    </table>
+  </center>
+  </CENTER>
+</BODY>
+
+</HTML>
